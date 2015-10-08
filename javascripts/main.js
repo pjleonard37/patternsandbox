@@ -19,7 +19,7 @@ var MyModule = (function(window, undefined){
 	};
 })(window);
 
-MyModule.myMethod();
-MyModule.myOtherMethod();
+//MyModule.myMethod();
+//MyModule.myOtherMethod();
 MyModule.someMethod();
 MyModule.someOtherMethod();

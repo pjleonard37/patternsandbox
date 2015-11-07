@@ -1,4 +1,2 @@
 # patternsandbox
-A sandbox for exploring JS patterns. 
-
-testing commit
+A sandbox for exploring JS patterns.

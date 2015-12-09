@@ -19,6 +19,21 @@ var chart = c3.generate({
       ],
 			types: {
 				data11: 'bar'
+			},
+			axis: {
+				y: {
+					label: {
+						text: 'Y Label',
+						position: 'outer-middle'
+					}
+				},
+				y2: {
+					show: true,
+					label: {
+						text: 'Y2 Label',
+						position: 'outer-middle'
+					}
+				}
 			}
     }
 });

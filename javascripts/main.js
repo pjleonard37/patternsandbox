@@ -1,11 +1,35 @@
 console.log("loaded main.js");
 
+
+var chart = c3.generate({
+    bindto: '#chart',
+    data: {
+      columns: [
+        ['data1', 30, 200, 100, 400, 150, 250],
+        ['data2', 50, 20, 10, 40, 15, 25]
+      ]
+    }
+});
+
+require.config({
+  baseUrl: '/js',
+  paths: {
+    d3: "http://d3js.org/d3.v3.min"
+  }
+});
+
+require(["d3", "c3"], function(d3, c3) {
+  c3.generate({
+    ...
+  });
+});
+
 // Revealing Module Pattern
 // Example from https://carldanley.com/js-revealing-module-pattern/
 
 /*
 var MyModule = (function(window, undefined){
-	
+
 	function myMethod(){
 		alert('my Method');
 	}

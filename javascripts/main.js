@@ -1,6 +1,5 @@
 console.log("loaded main.js");
 
-
 var chart = c3.generate({
     bindto: '#chart',
     data: {
@@ -43,16 +42,16 @@ var MyModule = (function(window, undefined){
 // From: https://www.youtube.com/watch?v=HkFlM73G-hk&list=PLoYCgNOIyGABs-wDaaxChu82q_xQgUb4f
 
 // object Literal
-var MyModule = {
-	name: 'PJ',
-	year: 2014,
-	sayName: function(){
-		console.log(this.name);
-	},
-	setName: function(newName){
-		this.name = newName;
-	}
-};
-
-myModule.setName('Raphael');
-myModule.sayName();
+// var MyModule = {
+// 	name: 'PJ',
+// 	year: 2014,
+// 	sayName: function(){
+// 		console.log(this.name);
+// 	},
+// 	setName: function(newName){
+// 		this.name = newName;
+// 	}
+// };
+//
+// myModule.setName('Raphael');
+// myModule.sayName();

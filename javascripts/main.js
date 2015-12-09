@@ -11,18 +11,6 @@ var chart = c3.generate({
     }
 });
 
-require.config({
-  baseUrl: '/js',
-  paths: {
-    d3: "http://d3js.org/d3.v3.min"
-  }
-});
-
-require(["d3", "c3"], function(d3, c3) {
-  c3.generate({
-    ...
-  });
-});
 
 // Revealing Module Pattern
 // Example from https://carldanley.com/js-revealing-module-pattern/

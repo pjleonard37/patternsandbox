@@ -4,8 +4,9 @@ console.log("loaded main.js");
 var spreadsheetID = "13SN1M6K1lbkmME6b5x1rigC2ps52w3NNqjMX7cnGTGU";
 
 // Make sure it is public or set to Anyone with link can view
-var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
+
 (function() {
+  var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
   $.getJSON(url, function(data) {
     console.log(data);
     var entry = data.feed.entry;

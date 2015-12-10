@@ -1,13 +1,15 @@
 console.log("loaded main.js");
 
 // ID of the Google Spreadsheet
-var spreadsheetID = "13SN1M6K1lbkmME6b5x1rigC2ps52w3NNqjMX7cnGTGU";
+
 
 // Make sure it is public or set to Anyone with link can view
 
 (function() {
   console.log("function sent");
+  var spreadsheetID = "13SN1M6K1lbkmME6b5x1rigC2ps52w3NNqjMX7cnGTGU";
   var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json-in-script&callback=";
+  console.log(url)
   $.getJSON(url, function(data) {
     console.log(data);
     var entry = data.feed.entry;

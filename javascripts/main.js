@@ -41,23 +41,24 @@ var chart = c3.generate({
       ],
 			type: {
 				data: 'pie'
-			},
-			axis: {
-				y: {
-					label: {
-						show: true,
-						text: 'Y Label',
-						position: 'outer-middle'
-					}
-				},
-				y2: {
-					show: true,
-					label: {
-						text: 'Y2 Label',
-						position: 'outer-middle'
-					}
-				}
-			}
+      }
+			// },
+			// axis: {
+			// 	y: {
+			// 		label: {
+			// 			show: true,
+			// 			text: 'Y Label',
+			// 			position: 'outer-middle'
+			// 		}
+			// 	},
+			// 	y2: {
+			// 		show: true,
+			// 		label: {
+			// 			text: 'Y2 Label',
+			// 			position: 'outer-middle'
+			// 		}
+			// 	}
+			// }
     }
 });
 

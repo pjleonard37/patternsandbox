@@ -40,7 +40,7 @@ var chart = c3.generate({
         ['data12', 50, 20, 10, 40, 15, 25]
       ],
 			types: {
-				data11: 'bar'
+				data11: 'pie'
 			},
 			axis: {
 				y: {

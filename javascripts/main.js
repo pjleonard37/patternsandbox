@@ -1,5 +1,23 @@
 console.log("loaded main.js");
 
+// ID of the Google Spreadsheet
+var spreadsheetID = "13SN1M6K1lbkmME6b5x1rigC2ps52w3NNqjMX7cnGTGU";
+
+// Make sure it is public or set to Anyone with link can view
+var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
+
+$.getJSON(url, function(data) {
+
+ var entry = data.feed.entry;
+
+ $(entry).each(function(){
+   // Column names are name, age, etc.
+   $('.results').prepend('<h2>'+this.gsx$name.$t+'</h2><p>'+this.gsx$age.$t+'</p>');
+ });
+
+});
+
+
 var chart = c3.generate({
     bindto: '#chart',
     data: {
@@ -23,6 +41,7 @@ var chart = c3.generate({
 			axis: {
 				y: {
 					label: {
+						show: true,
 						text: 'Y Label',
 						position: 'outer-middle'
 					}

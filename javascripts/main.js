@@ -15,7 +15,7 @@ $.getJSON(url, function(data) {
    $('.results').prepend('<h2>'+this.gsx$name.$t+'</h2><p>'+this.gsx$age.$t+'</p>');
  });
 
-});
+})();
 
 
 var chart = c3.generate({

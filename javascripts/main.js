@@ -12,7 +12,7 @@ console.log("loaded main.js");
   console.log(url)
   $.getJSON(url, function(data) {
     var entry = data.feed.entry;
-    var data = [];
+    var datap = [];
     console.log(entry);
     for (var i = 0; i < entry.length; i++) {
       datap[i] = entry.gsx$name.$t, entry.gsx$percentage.$t;

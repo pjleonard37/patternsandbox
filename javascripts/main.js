@@ -14,7 +14,7 @@ console.log("loaded main.js");
     var entry = data.feed.entry;
     console.log(entry);
 
-    $(entry).each(function(){
+    //$(entry).each(function(){
       var chart = c3.generate({
           bindto: '#chart',
           data: {
@@ -28,7 +28,7 @@ console.log("loaded main.js");
           legend: {
               position: 'bottom'
           }
-      });
+      //});
     });
   });
 })();

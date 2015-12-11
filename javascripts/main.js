@@ -42,6 +42,10 @@ console.log("loaded main.js");
                   data.feed.entry[i][key.substr(4)] = data.feed.entry[i][key].$t;
                   delete data.feed.entry[i][key];
               }
+              else
+              {
+                delete data.feed.entry[i][key];
+              }
           }
       }
       var datap = data.feed.entry;

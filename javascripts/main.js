@@ -15,7 +15,7 @@ console.log("loaded main.js");
     var datap = [];
     console.log(entry);
     for (var i = 0; i < entry.length; i++) {
-      datap[i] = entry.gsx$name.$t, entry.gsx$percentage.$t;
+      datap[i] = entry.gsx$name.$t;
     }
     console.log(data);
     var chart = c3.generate({

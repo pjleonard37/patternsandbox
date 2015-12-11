@@ -11,55 +11,26 @@ console.log("loaded main.js");
   var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
   console.log(url)
   $.getJSON(url, function(data) {
-    console.log(data);
     var entry = data.feed.entry;
     console.log(entry);
     $(entry).each(function(){
-     // Column names are name, age, etc.
-     $('.results').prepend('<h2>'+this.gsx$name.$t+'</h2><p>'+this.gsx$age.$t+'</p>');
+      var chart = c3.generate({
+          bindto: '#chart',
+          data: {
+            entry,
+      			type: 'pie'
+          },
+          color: {
+            pattern: ['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5']
+          },
+          legend: {
+              position: 'bottom'
+          }
+      });
     });
   });
 })();
 
-
-var chart = c3.generate({
-    bindto: '#chart',
-    data: {
-      columns: [
-        ['data1', 30],
-				['data2', 130],
-				['data3', 230],
-				['data4', 330],
-				['data5', 430],
-				['data6', 530],
-				['data7', 630],
-      ],
-			type: 'pie'
-			// },
-			// axis: {
-			// 	y: {
-			// 		label: {
-			// 			show: true,
-			// 			text: 'Y Label',
-			// 			position: 'outer-middle'
-			// 		}
-			// 	},
-			// 	y2: {
-			// 		show: true,
-			// 		label: {
-			// 			text: 'Y2 Label',
-			// 			position: 'outer-middle'
-			// 		}
-			// 	}
-			// }
-    },
-    color: {
-      pattern: ['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', '#c49c94', '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf', '#9edae5']
-    },
-    legend: {
-        position: 'bottom'
-    }
-});
 
 
 // Revealing Module Pattern

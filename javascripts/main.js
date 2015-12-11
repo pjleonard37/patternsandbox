@@ -8,7 +8,7 @@ console.log("loaded main.js");
 (function() {
   console.log("function sent");
   var spreadsheetID = "140f-u3YxCg3xlspx-xNWPbkXVPSHOOMopCWtsV-Wdao"
-  var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json-in-script&callback=";
+  var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
   console.log(url)
   $.getJSON(url, function(data) {
     console.log(data);

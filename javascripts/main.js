@@ -44,8 +44,21 @@ console.log("loaded main.js");
               }
           }
       }
-      console.log(data.feed.entry);
-      return data.feed.entry;
+      var datap = data.feed.entry;
+      console.log(datap);
+      var chart = c3.generate({
+          bindto: '#chart',
+          data: {
+            columns: datap,
+            type: 'bar'
+          },
+          color: {
+            pattern: ['#449AA2', '#364D6E', '#703F7D', '#ED871F', '#B5004A', '#744584', '#cfddb8', '#97AFD2']
+          },
+          legend: {
+              position: 'bottom'
+          }
+      });
     });
 })();
 

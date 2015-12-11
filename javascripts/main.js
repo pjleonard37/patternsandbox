@@ -21,7 +21,7 @@ console.log("loaded main.js");
     var chart = c3.generate({
         bindto: '#chart',
         data: {
-          datap,
+          columns: datap,
           type: 'pie'
         },
         color: {

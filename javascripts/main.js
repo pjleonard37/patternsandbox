@@ -17,7 +17,7 @@ console.log("loaded main.js");
     for (var i = 0; i < entry.length; i++) {
       datap[i] = entry[i].gsx$name.$t;
     }
-    console.log(data);
+    console.log(datap);
     var chart = c3.generate({
         bindto: '#chart',
         data: {

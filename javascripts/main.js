@@ -15,7 +15,7 @@ console.log("loaded main.js");
     var datap = [];
     console.log(entry);
     for (var i = 0; i < entry.length; i++) {
-      datap.push([entry[i].2.$t, entry[i].3.$t]);
+      datap.push([entry[i][gsx$regions]$t, entry[i][3]$t]);
     }
     console.log(datap);
     var chart = c3.generate({

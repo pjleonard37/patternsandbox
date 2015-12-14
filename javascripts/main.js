@@ -26,12 +26,20 @@ console.log("loaded main.js");
       }
       var datap = data.feed.entry;
       console.log(datap);
+      var xaxistitle = datap[0][0];
+      var xaxisoptions = [];
+      for (i = 1; i < datap[0].length; i++)
+      {
+        xaxisoptions.push(datap[0][i]);
+      }
+      console.log(xaxistitle);
+      console.log(xaxisoptions);
       var chart = c3.generate({
           bindto: '#chart',
           data: {
             json: datap,
             keys: {
-              x: 'name',
+              x: 'category',
               value: ['year2012', 'year2013', 'year2014']
             },
             type: 'bar'

@@ -12,32 +12,29 @@ console.log("loaded main.js");
   console.log(url)
   $.getJSON(url,
     function (data) {
+      var datafeed = data.feed.entry;
       var xaxisoptions = [];
-      for (var i = 0; i < data.feed.entry.length; i++) {
-          for (var key in data.feed.entry[i]) {
-              if (data.feed.entry[i].hasOwnProperty(key) && key.substr(0,4) === 'gsx$') {
-                data.feed.entry[i][key.substr(4)] = data.feed.entry[i][key].$t;
+      for (var i = 0; i < datafeed.length; i++) {
+          for (var key in datafeed[i]) {
+              if (datafeed[i].hasOwnProperty(key) && key.substr(0,4) === 'gsx$') {
+                datafeed[i][key.substr(4)] = datafeed[i][key].$t;
                 if (i === 0)
                 {
                   xaxisoptions.push(key.substr(4));
                 }
-                delete data.feed.entry[i][key];
+                delete datafeed[i][key];
               }
               else
               {
-                delete data.feed.entry[i][key];
+                delete datafeed[i][key];
               }
           }
       }
-      var datap = data.feed.entry;
-      console.log(datap);
       var xaxistitle = datap[0][0];
-      console.log(xaxistitle);
-      console.log(xaxisoptions);
       var chart = c3.generate({
           bindto: '#chart',
           data: {
-            json: datap,
+            json: datafeed,
             keys: {
               x: xaxisoptions[0],
               value: xaxisoptions

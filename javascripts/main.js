@@ -30,7 +30,6 @@ console.log("loaded main.js");
               }
           }
       }
-      var xaxistitle = datap[0][0];
       var chart = c3.generate({
           bindto: '#chart',
           data: {

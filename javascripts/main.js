@@ -17,10 +17,10 @@ console.log("loaded main.js");
           for (var key in data.feed.entry[i]) {
               if (data.feed.entry[i].hasOwnProperty(key) && key.substr(0,4) === 'gsx$') {
                 data.feed.entry[i][key.substr(4)] = data.feed.entry[i][key].$t;
-                if (i === 0)
-                {
-                  xaxisoptions.push(key.substr(4));
-                }
+                // if (i === 0)
+                // {
+                //   xaxisoptions.push(key.substr(4));
+                // }
                 delete data.feed.entry[i][key];
               }
               else

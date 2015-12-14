@@ -55,7 +55,7 @@ console.log("loaded main.js");
           data: {
             json: datap,
             keys: {
-              x: 'name',
+              x: 'name'
             },
             type: 'bar'
           },

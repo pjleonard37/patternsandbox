@@ -40,7 +40,7 @@ console.log("loaded main.js");
             json: datap,
             keys: {
               x: xaxisoptions[0],
-              value: ['year2012', 'year2013', 'year2014']
+              value: xaxisoptions
             },
             type: 'bar'
           },

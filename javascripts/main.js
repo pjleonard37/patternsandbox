@@ -54,7 +54,9 @@ console.log("loaded main.js");
           bindto: '#chart',
           data: {
             json: datap,
-            x: 'name',
+            keys: {
+              x: 'name',
+            },
             type: 'bar'
           },
           color: {

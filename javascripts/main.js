@@ -54,6 +54,7 @@ console.log("loaded main.js");
           bindto: '#chart',
           data: {
             json: datap,
+            x: 'name',
             type: 'bar'
           },
           color: {
@@ -61,6 +62,11 @@ console.log("loaded main.js");
           },
           legend: {
               position: 'bottom'
+          },
+          axis: {
+            x: {
+              type: 'category'
+            }
           }
       });
     });

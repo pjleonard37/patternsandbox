@@ -32,7 +32,7 @@ console.log("loaded main.js");
             json: datap,
             keys: {
               x: 'name',
-              value: ['year', 'year_2', 'year_3']
+              value: ['2012', '2013', '2014']
             },
             type: 'bar'
           },

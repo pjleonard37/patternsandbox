@@ -6,7 +6,6 @@ console.log("loaded main.js");
 // Make sure it is public or set to Anyone with link can view
 
 (function() {
-  console.log("function sent");
   var spreadsheetID = "140f-u3YxCg3xlspx-xNWPbkXVPSHOOMopCWtsV-Wdao"
   var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
   console.log(url)
@@ -55,8 +54,8 @@ console.log("loaded main.js");
           },
           axis: {
             x: {
-              type: 'category',
-              categories: labeloptions
+              type: 'category'//,
+              //categories: labeloptions
             }
           }
       });

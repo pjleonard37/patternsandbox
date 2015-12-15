@@ -31,6 +31,7 @@ console.log("loaded main.js");
               }
           }
       }
+      var categorynames = datafeed.pop();
       console.log(datafeed);
       console.log(xaxisoptions);
       var chart = c3.generate({
@@ -41,7 +42,7 @@ console.log("loaded main.js");
               x: xaxisoptions[0],
               value: xaxisoptions
             },
-            names: datafeed[datafeed.length-1],
+            names: categorynames,
             type: 'bar'
           },
           color: {

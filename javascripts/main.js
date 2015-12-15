@@ -53,9 +53,9 @@ console.log("loaded main.js");
           axis: {
             x: {
               type: 'category'
-            }
+            },
             tick: {
-              values: xaxisoptions[8];
+              values: xaxisoptions[8]
             }
           }
       });

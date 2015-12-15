@@ -39,7 +39,7 @@ console.log("loaded main.js");
           data: {
             json: datafeed,
             keys: {
-              x: xaxisoptions[xaxisoptions.length],
+              x: xaxisoptions[0],
               value: xaxisoptions
             },
             type: 'bar'
@@ -53,6 +53,9 @@ console.log("loaded main.js");
           axis: {
             x: {
               type: 'category'
+            }
+            tick: {
+              values: xaxisoptions
             }
           }
       });

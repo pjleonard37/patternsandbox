@@ -44,6 +44,7 @@ console.log("loaded main.js");
             },
             names: categorynames,
             type: 'bar',
+            order: null,
             groups: [xaxisoptions]
           },
           color: {

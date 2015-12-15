@@ -45,7 +45,7 @@ console.log("loaded main.js");
               value: xaxisoptions
             },
             names: {
-              xaxisoptions[8];
+              datafeed[5];
             }
             type: 'bar'
           },

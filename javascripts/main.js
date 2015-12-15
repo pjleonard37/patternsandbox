@@ -44,6 +44,9 @@ console.log("loaded main.js");
               x: xaxisoptions[0],
               value: xaxisoptions
             },
+            names: {
+              xaxisoptions[8];
+            }
             type: 'bar'
           },
           color: {

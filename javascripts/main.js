@@ -30,6 +30,10 @@ console.log("loaded main.js");
           }
       }
       var categorynames = datafeed.pop();
+      console.log(datafeed);
+      console.log(categorynames);
+      console.log(xaxisoptions);
+      console.log(xaxisoptions[0]);
       var chart = c3.generate({
           bindto: '#chart',
           data: {
@@ -40,13 +44,13 @@ console.log("loaded main.js");
             },
             names: categorynames,
             type: 'bar',
-            groups: xaxisoptions[0]
+            //groups: xaxisoptions[0]
           },
           color: {
             pattern: ['#449AA2', '#364D6E', '#703F7D', '#ED871F', '#B5004A', '#744584', '#cfddb8', '#97AFD2']
           },
           legend: {
-              position: 'right'
+              position: 'left'
           },
           axis: {
             x: {

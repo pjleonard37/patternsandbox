@@ -12,7 +12,9 @@ console.log("loaded main.js");
   console.log(url)
   $.getJSON(url,
     function (data) {
+      console.log(data);
       var datafeed = data.feed.entry;
+      console.log(datafeed);
       var xaxisoptions = [];
       for (var i = 0; i < datafeed.length; i++) {
           for (var key in datafeed[i]) {
@@ -30,6 +32,7 @@ console.log("loaded main.js");
               }
           }
       }
+      console.log(datafeed);
       var chart = c3.generate({
           bindto: '#chart',
           data: {
@@ -39,6 +42,11 @@ console.log("loaded main.js");
               value: xaxisoptions
             },
             type: 'bar'
+            labels: {
+              format: {
+
+              }
+            }
           },
           color: {
             pattern: ['#449AA2', '#364D6E', '#703F7D', '#ED871F', '#B5004A', '#744584', '#cfddb8', '#97AFD2']

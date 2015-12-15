@@ -22,7 +22,7 @@ console.log("loaded main.js");
                 datafeed[i][key.substr(4)] = datafeed[i][key].$t;
                 if (i === datafeed.length-1)
                 {
-                  xaxisoptions.push(key.substr(4));
+                  xaxisoptions.push(datafeed[i][key]);
                 }
                 delete datafeed[i][key];
               }

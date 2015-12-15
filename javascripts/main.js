@@ -20,9 +20,9 @@ console.log("loaded main.js");
           for (var key in datafeed[i]) {
               if (datafeed[i].hasOwnProperty(key) && key.substr(0,4) === 'gsx$') {
                 datafeed[i][key.substr(4)] = datafeed[i][key].$t;
-                if (i === 0)
+                if (i === datafeed.length-1)
                 {
-                  xaxisoptions.push(key.substr(4));
+                  xaxisoptions.push(datafeed[i]);
                 }
                 delete datafeed[i][key];
               }
@@ -39,7 +39,7 @@ console.log("loaded main.js");
           data: {
             json: datafeed,
             keys: {
-              x: xaxisoptions[8],
+              x: xaxisoptions[0],
               value: xaxisoptions
             },
             type: 'bar'

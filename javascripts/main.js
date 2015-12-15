@@ -15,15 +15,13 @@ console.log("loaded main.js");
       var datafeed = data.feed.entry;
       console.log(datafeed);
       var xaxisoptions = [];
-      var labeloptions = [];
-      for (var i = 0; i < datafeed.length - 1; i++) {
+      for (var i = 0; i < datafeed.length; i++) {
           for (var key in datafeed[i]) {
               if (datafeed[i].hasOwnProperty(key) && key.substr(0,4) === 'gsx$') {
                 datafeed[i][key.substr(4)] = datafeed[i][key].$t;
-                if (i === datafeed.length-1)
+                if (i === 0)
                 {
                   xaxisoptions.push(key.substr(4));
-                  labeloptions.push(datafeed[i][key].$t);
                 }
                 delete datafeed[i][key];
               }
@@ -35,7 +33,6 @@ console.log("loaded main.js");
       }
       console.log(datafeed);
       console.log(xaxisoptions);
-      console.log(labeloptions);
       var chart = c3.generate({
           bindto: '#chart',
           data: {
@@ -55,8 +52,7 @@ console.log("loaded main.js");
           },
           axis: {
             x: {
-              type: 'category'//,
-              //categories: labeloptions
+              type: 'category'
             }
           }
       });

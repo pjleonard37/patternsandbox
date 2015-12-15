@@ -11,6 +11,8 @@ console.log("loaded main.js");
   console.log(url)
   $.getJSON(url,
     function (data) {
+      var newData = data.getDataTable();
+      console.log(newData);
       console.log(data);
       var datafeed = data.feed.entry;
       console.log(datafeed);

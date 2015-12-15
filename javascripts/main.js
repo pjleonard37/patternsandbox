@@ -36,6 +36,7 @@ console.log("loaded main.js");
       }
       console.log(datafeed);
       console.log(xaxisoptions);
+      console.log(labeloptions);
       var chart = c3.generate({
           bindto: '#chart',
           data: {
@@ -54,7 +55,8 @@ console.log("loaded main.js");
           },
           axis: {
             x: {
-              type: 'category'
+              type: 'category',
+              categories: labeloptions
             }
           }
       });

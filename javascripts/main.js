@@ -40,7 +40,7 @@ console.log("loaded main.js");
             json: datafeed,
             keys: {
               x: xaxisoptions[0],
-              value: xaxisoptions[0]
+              value: xaxisoptions
             },
             type: 'bar'
           },

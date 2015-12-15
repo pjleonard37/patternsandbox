@@ -42,11 +42,11 @@ console.log("loaded main.js");
               value: xaxisoptions
             },
             type: 'bar'
-            labels: {
-              format: {
-
-              }
-            }
+            // labels: {
+            //   format: {
+            //
+            //   }
+            // }
           },
           color: {
             pattern: ['#449AA2', '#364D6E', '#703F7D', '#ED871F', '#B5004A', '#744584', '#cfddb8', '#97AFD2']

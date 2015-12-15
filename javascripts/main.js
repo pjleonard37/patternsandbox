@@ -41,7 +41,7 @@ console.log("loaded main.js");
               x: xaxisoptions[0],
               value: xaxisoptions
             },
-            names: datafeed[5],
+            names: datafeed[datafeed.length],
             type: 'bar'
           },
           color: {

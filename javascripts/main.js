@@ -11,9 +11,7 @@ console.log("loaded main.js");
   console.log(url)
   $.getJSON(url,
     function (data) {
-      console.log(data);
       var datafeed = data.feed.entry;
-      console.log(datafeed);
       var xaxisoptions = [];
       for (var i = 0; i < datafeed.length; i++) {
           for (var key in datafeed[i]) {
@@ -32,8 +30,6 @@ console.log("loaded main.js");
           }
       }
       var categorynames = datafeed.pop();
-      console.log(datafeed);
-      console.log(xaxisoptions);
       var chart = c3.generate({
           bindto: '#chart',
           data: {

@@ -33,20 +33,16 @@ console.log("loaded main.js");
           }
       }
       console.log(datafeed);
+      console.log(xaxisoptions);
       var chart = c3.generate({
           bindto: '#chart',
           data: {
             json: datafeed,
             keys: {
-              x: xaxisoptions[0],
+              x: xaxisoptions[xaxisoptions.length],
               value: xaxisoptions
             },
             type: 'bar'
-            // labels: {
-            //   format: {
-            //
-            //   }
-            // }
           },
           color: {
             pattern: ['#449AA2', '#364D6E', '#703F7D', '#ED871F', '#B5004A', '#744584', '#cfddb8', '#97AFD2']

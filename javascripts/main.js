@@ -43,7 +43,7 @@ console.log("loaded main.js");
               value: xaxisoptions
             },
             names: categorynames,
-            //type: 'bar',
+            type: 'pie',
             //order: null,
             //groups: [xaxisoptions]
           },

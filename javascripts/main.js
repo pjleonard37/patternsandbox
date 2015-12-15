@@ -44,9 +44,7 @@ console.log("loaded main.js");
               x: xaxisoptions[0],
               value: xaxisoptions
             },
-            names: {
-              democraticpractice: 'Democratic Practice'
-            },
+            names: datafeed[5],
             type: 'bar'
           },
           color: {

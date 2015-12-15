@@ -56,7 +56,8 @@ console.log("loaded main.js");
           axis: {
             x: {
               type: 'category'
-            }
+            },
+            rotated: true
           }
       });
     });

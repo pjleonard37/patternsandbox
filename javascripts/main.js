@@ -16,13 +16,15 @@ console.log("loaded main.js");
       var datafeed = data.feed.entry;
       console.log(datafeed);
       var xaxisoptions = [];
+      var labeloptions = [];
       for (var i = 0; i < datafeed.length; i++) {
           for (var key in datafeed[i]) {
               if (datafeed[i].hasOwnProperty(key) && key.substr(0,4) === 'gsx$') {
                 datafeed[i][key.substr(4)] = datafeed[i][key].$t;
                 if (i === datafeed.length-1)
                 {
-                  xaxisoptions.push(datafeed[i][key].$t);
+                  xaxisoptions.push(key.substr(4));
+                  labeloptions.push(datafeed[i][key].$t);
                 }
                 delete datafeed[i][key];
               }
